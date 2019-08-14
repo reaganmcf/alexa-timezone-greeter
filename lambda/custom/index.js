@@ -60,7 +60,8 @@ const GreetIntentHandler = {
 		console.log(tzone);
 
 		let temp = tzone.time.split(' ');
-		let tTime = parseFloat(temp[0].substring(0, 1)) + temp[1] == 'PM' ? 12 : 0;
+		let tTime = parseInt(temp[0].substring(0, 1));
+		tTime += temp[1] === 'PM' ? 12 : 0;
 
 		let prefix = '';
 		if (tTime < 10) {
