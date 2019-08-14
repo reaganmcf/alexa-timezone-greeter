@@ -1,0 +1,51 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "timezone welcome",
+			"intents": [
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.FallbackIntent",
+					"samples": []
+				},
+				{
+					"name": "GreetIntent",
+					"samples": [ "what is my greeting", "tell my my greeting", "to greet me" ]
+				},
+				{
+					"name": "ChangeGreetingIntent",
+					"slots": [
+						{
+							"name": "NewGreeting",
+							"type": "LIST_OF_GREETINGS"
+						}
+					],
+					"samples": [ "change my greeting to {NewGreeting}", "update my greeting to {NewGreeting}" ]
+				}
+			],
+			"types": [
+				{
+					"name": "LIST_OF_GREETINGS",
+					"values": [
+						{ "name": { "value": "my man" } },
+						{ "name": { "value": "you are the best" } },
+						{ "name": { "value": "you are great" } },
+						{ "name": { "value": "you are awesome" } },
+						{ "name": { "value": "go get them" } }
+					]
+				}
+			]
+		}
+	}
+}
